@@ -2,13 +2,14 @@
 	<div>
 		<header>
 			<div class="container">
-				<img src="../assets/Logo.png" alt="Logo" height="40px">
+				<img src="../assets/hamburger.png" alt="" id="hamburger" height="20px">
+				<img src="../assets/Logo.png" alt="Logo" height="40px" class="logo">
 				<input type="text" placeholder="Search here">
 				<div class="cart">
 					<img src="../assets/shopping-bag.png" alt="Shopping bag" height="20px">
 					<p>({{cart}}) </p>
 					<p>
-						<span> {{amount}} kr</span>
+						<span class="amount"> {{amount}} kr</span>
 					</p>
 				</div>
 				<button>Check out</button>
@@ -40,7 +41,7 @@ header{
 	grid-template-columns: repeat(5, 1fr);
 	margin: 0 0 1.2em;
 }
-img{
+.logo{
 	grid-column: 1/1;
 	margin: 0 0.5em 0 0;
 }
@@ -73,7 +74,49 @@ nav{
 a{
 	margin: 0 0.5em 0;
 }
-@media only screen and (max-width: 990px) {
-	
+#hamburger{
+	display: none;
+}
+@media only screen and (max-width: 804px) {
+.container{
+	grid-template-columns: repeat(3, 1fr);
+}
+nav{
+	display: none;
+}
+input{
+	display: none;
+}
+button{
+	display: none
+}
+.cart{
+	grid-column: 3/3;
+	margin: 0;
+	justify-content: flex-end;
+}
+.amount{
+	display: none;
+}
+.logo{
+	grid-column: 2/2;
+	height: 30px;
+}
+#hamburger{
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	grid-column: 1/1;
+	display: block;
+}
+#hamburger:hover{
+	cursor: pointer;
+}
+}
+@media only screen and (max-width: 500px) {
+.logo{
+	grid-column: 2/2;
+	height: 25px;
+}
 }
 </style>

@@ -258,6 +258,7 @@ img:hover{
 .info{
 	grid-column: 1/4;
 	margin: 0 2em 0 2em;
+	padding: 0 2em 2em;
 }
 .images{
 	grid-column: 1/4;
