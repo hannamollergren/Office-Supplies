@@ -24,9 +24,9 @@
 			</div>
 			<div class="images">
 				<img :src='image1' alt="Product image" height="300px" width="300px" class="large-image"><br>
-				<img src="../assets/paper1.jpg" alt="Product image" height="60px" @click="changeImage1">
-				<img src="../assets/paper2.jpg" alt="Product image" height="60px" @click="changeImage2">
-				<img src="../assets/paper3.jpg" alt="Product image" height="60px" @click="changeImage3">
+				<img src="../assets/paper1.jpg" alt="Product image" height="90px" class="image1" @click="changeImage1">
+				<img src="../assets/paper2.jpg" alt="Product image" height="90px" class="image2" @click="changeImage2">
+				<img src="../assets/paper3.jpg" alt="Product image" height="90px" class="image3"  @click="changeImage3">
 			</div>
 			<div class="info">
 				<h2>Paper</h2>
@@ -44,9 +44,10 @@
 			</div>
 				<p class="info-text">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. <br><br>
-					Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum.
+					Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. nulla luctus pharetra vulputate.<br>
 					<span v-if="!isHidden">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus.<br><br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetu
 					</span>
 					<button class="btn-more" @click="isHidden = !isHidden">Read more</button>
 				</p>
@@ -144,6 +145,12 @@ a:hover{
 .large-image{
 	margin: 0 0 1em 0;
 }
+.image1{
+	margin: 0 0.8em 0 0;
+}
+.image2{
+	margin: 0 0.9em 0 0;
+}
 img:hover{
 	cursor: pointer;
 }
@@ -163,10 +170,12 @@ img:hover{
 	display: flex;
 	align-items: center;
 	justify-content: start;
+	grid-column: 1/1;
 }
 .options-container{
 	display: flex;
 	align-items: center;
+	grid-column: 2/2;
 }
 .options{
 	margin: 0 1em 0;
@@ -211,4 +220,59 @@ img:hover{
 .title{
 	margin: 0 0 1em;
 }
+@media only screen and (max-width: 1055px) {
+.price{
+	grid-column: 1/4;
+	justify-content: center;
+	margin: 0 0 0.7em;
+}
+.options-container{
+	grid-column: 1/4;
+	margin: 0 0 0.8em;
+}
+.options{
+	margin: 0 1em 0;
+	width: 100%;
+}
+.btn-buy{
+	grid-column: 1/4;
+}
+}
+@media only screen and (max-width: 990px) {
+.container{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	margin: 0 0 2em;
+}
+.sidebar{
+	display: none;
+}
+.container-boxes{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 1em 2em 3em 2em;
+	gap: 1em;	
+}
+}
+@media only screen and (max-width: 700px) {
+.info{
+	grid-column: 1/4;
+	margin: 0 2em 0 2em;
+}
+.images{
+	grid-column: 1/4;
+	margin: 0 2em 0 2em;
+}
+.box1{
+	grid-column: 1/4;
+}
+.box2{
+	grid-column: 1/4;
+}
+.box3{
+	grid-column: 1/4;
+}
+}
+
+
 </style>

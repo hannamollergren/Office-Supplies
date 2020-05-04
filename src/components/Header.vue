@@ -73,7 +73,7 @@ nav{
 a{
 	margin: 0 0.5em 0;
 }
-@media only screen and (max-width: 804px) {
-  
+@media only screen and (max-width: 990px) {
+	
 }
 </style>

@@ -98,7 +98,7 @@ a{
 	margin: 0 0.3em 0 0;
 }
 
-@media only screen and (max-width: 804px) {
+@media only screen and (max-width: 990px) {
 .logo{
 	margin: 0 0 1em 0;
 	grid-column: 1/5;
@@ -124,6 +124,4 @@ a{
 }
 
 }
-
-
 </style>
