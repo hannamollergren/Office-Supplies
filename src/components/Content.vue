@@ -23,10 +23,10 @@
 				<a href="#">Armoire desks</a> 
 			</div>
 			<div class="images">
-				<img src="../assets/paper1.jpg" alt="Product image" height="300px" width="300px" class="large-image"><br>
-				<img src="../assets/paper1.jpg" alt="Product image" height="50px">
-				<img src="../assets/paper2.jpg" alt="Product image" height="50px">
-				<img src="../assets/paper3.jpg" alt="Product image" height="50px">
+				<img :src='image1' alt="Product image" height="300px" width="300px" class="large-image"><br>
+				<img src="../assets/paper1.jpg" alt="Product image" height="60px" @click="changeImage1">
+				<img src="../assets/paper2.jpg" alt="Product image" height="60px" @click="changeImage2">
+				<img src="../assets/paper3.jpg" alt="Product image" height="60px" @click="changeImage3">
 			</div>
 			<div class="info">
 				<h2>Paper</h2>
@@ -52,6 +52,26 @@
 				</p>
 			</div>
 		</div>
+		<div class="container-boxes">
+				<div class="box1">
+					<h3 class="title">Paper is awesome!</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+					</p>
+				</div>
+				<div class="box2">
+					<h3 class="title">Paper is awesome!</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+					</p>
+				</div>
+				<div class="box3">
+					<h3 class="title">Paper is awesome!</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet la.
+					</p>
+				</div>
+			</div>
 	</div>
 	
 </template>
@@ -62,12 +82,25 @@ export default {
 		cart: 0,
 		amount: 0,
 		isHidden: Boolean(true),
+		image1: 'https://lh3.googleusercontent.com/BIO6M_BdlnAPgTrm_om1aZpZaEzGwuanb9s0gdRAQ1C6090xWUVq9Rk34J_XSASZ3owJRx1-FJH0gsBNgTgnFDa33Jvjp4DCaPvrJ5kAfjNavBD0p1n7v6cvg58s3r3Y1QMCWnWAUw=w2400',
+		image2: 'https://lh3.googleusercontent.com/JhwfYAwIVlacD-_mehDwGrAFByFxC_ytHP0dcPD0vALvqpsrvnz5nJ8S6YE402w4pxhLriKehy49dXnfZBmvIEye9RzVHJ1GJTkuXgLLsp8WgUw4x8GlCGcX0aWwMHYWAIbY-ffGHA=w2400',
+		image3: "https://lh3.googleusercontent.com/83eair2sysjXX33UnvfskCkc5Nt6shXoOv77ckW0YOZuEmlvMTIZanKjD08QGseeneVepTI8epYoRY2ZMrxacznQA3BxqEh2sukQNevmR-6eGquQx8s3lC5DNUZywIUyeqy75YiZDQ=w2400"
+		
 	}),
 	methods: {
 		addCartButton(){
 			this.cart += 1;
 			this.amount += 599;
 			this.$emit('click', this.cart, this.amount)
+		},
+		changeImage1(){
+			this.image1 = 'https://lh3.googleusercontent.com/BIO6M_BdlnAPgTrm_om1aZpZaEzGwuanb9s0gdRAQ1C6090xWUVq9Rk34J_XSASZ3owJRx1-FJH0gsBNgTgnFDa33Jvjp4DCaPvrJ5kAfjNavBD0p1n7v6cvg58s3r3Y1QMCWnWAUw=w2400';
+		},
+		changeImage2(){
+			this.image1 = this.image2;
+		},
+		changeImage3(){
+			this.image1 = this.image3;
 		}
 	}
 }
@@ -79,7 +112,7 @@ export default {
 .container{
 	display: grid;
 	grid-template-columns: 1fr 2fr 3fr;
-	margin: 0 0 3em;
+	margin: 0 0 2em;
 
 }
 p{
@@ -111,6 +144,9 @@ a:hover{
 .large-image{
 	margin: 0 0 1em 0;
 }
+img:hover{
+	cursor: pointer;
+}
 .info{
 	background-color: white;
 	padding: 2em;
@@ -133,9 +169,8 @@ a:hover{
 	align-items: center;
 }
 .options{
-	
 	margin: 0 1em 0;
-	width: 60%;
+	width: 80%;
 }
 .btn-buy{
 	grid-column: 3/3;
@@ -151,6 +186,29 @@ a:hover{
 	color: #333333;
 	margin: 2em 0 0;
 }
-
-
+.container-boxes{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 1em 2em 3em 313px;
+	gap: 1em;
+	
+}
+.box1{
+	background-color: white;
+	padding: 2em;
+	grid-column: 1/1;
+}
+.box2{
+	background-color: white;
+	padding: 2em;
+	grid-column: 2/2;
+}
+.box3{
+	background-color: white;
+	padding: 2em;
+	grid-column: 3/3;
+}
+.title{
+	margin: 0 0 1em;
+}
 </style>

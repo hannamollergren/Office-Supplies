@@ -38,7 +38,7 @@ export default {
 	margin: 0;
 }
 #app {
-	height: 120vh;
+	height: 100%;
 	background-color: #F3F3F2;
 	font-family: sans-serif, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -57,6 +57,7 @@ button:hover{
 	transition: 0.5s;
 	cursor: pointer;
 }
+button:focus {outline:0;}
 a{
 	justify-content: start;
 	text-decoration: none;
