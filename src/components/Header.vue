@@ -7,7 +7,9 @@
 				<div class="cart">
 					<img src="../assets/shopping-bag.png" alt="Shopping bag" height="20px">
 					<p>({{cart}}) </p>
-					<p><span> {{amount}} kr</span></p>
+					<p>
+						<span> {{amount}} kr</span>
+					</p>
 				</div>
 				<button>Check out</button>
 			</div>
@@ -22,10 +24,10 @@
 
 <script>
 export default {
-	data: () =>({
-		cart: 0,
-		amount: 0,
-	})
+	props:{
+		cart: Number(0),
+		amount: Number(0)
+	}
 }
 </script>
 
@@ -69,11 +71,7 @@ nav{
 	text-align: start;
 }
 a{
-	justify-content: start;
-	text-decoration: none;
 	margin: 0 0.5em 0;
-	color: #333333;
-	cursor: pointer;
 }
 @media only screen and (max-width: 804px) {
   

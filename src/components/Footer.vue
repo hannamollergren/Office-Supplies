@@ -29,7 +29,7 @@
 				</p>
 				<p class="social-item">
 					<img src="../assets/twitter.png" height="20px" alt="Icon Twitter" class="icon"><a href="#">Twitter</a>
-					
+	
 				</p>
 				<p class="social-item">
 					<img src="../assets/linkedin.png" height="20px" alt="Icon LinkedIn" class="icon"><a href="#">LinkedIn</a>
@@ -57,13 +57,12 @@ footer{
 	padding: 2em;
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr 1fr;
-	
 }
 .logo{
-	margin: 1em 0 1em 2em;
+	margin: 1em 0 1em 0;
 }
 .paragraph{
-	margin: 0 0 1em 2em;
+	margin: 0 0 1em 0;
 	grid-column: 1/2;
 	text-align: start;
 }
@@ -74,10 +73,9 @@ footer{
 }
 .best-sellers1{
 	text-align: start;
-	margin: 1.2em 0 0 3em;
+	margin: 1.2em 0 0 2em;
 	grid-column: 3/3;
 }
-
 span{
 	font-weight: bold;
 	color: #CBBBA0;
@@ -86,9 +84,7 @@ li{
 	padding: 0.2em;
 }
 a{
-	text-decoration: none;
 	color: #CBBBA0;
-	cursor: pointer;
 }
 .social-media{
 	text-align: start;
@@ -108,7 +104,7 @@ a{
 	grid-column: 1/5;
 }
 .paragraph{
-	margin: 0 0 1em 0;
+	margin: 0 0 1.2em 0;
 	grid-column: 1/5;
 	text-align: start;
 }
