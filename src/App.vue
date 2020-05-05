@@ -21,10 +21,10 @@ export default {
 	amount: 0,
   }),
   methods:{
-		fromContent(value1, value2){
-			this.cart = value1;
-			this.amount = value2;
-		}
+	fromContent(value1, value2){
+		this.cart = value1;
+		this.amount = value2;
+	}
   }
 }
 </script>
