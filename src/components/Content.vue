@@ -23,15 +23,17 @@
 				<a href="#">Armoire desks</a> 
 			</div>
 			<div class="images">
-				<img :src='image1' alt="Product image" height="300px" width="300px" class="large-image"><br>
-				<img src="../assets/paper1.jpg" alt="Product image" height="90px" class="image1" @click="changeImage1">
-				<img src="../assets/paper2.jpg" alt="Product image" height="90px" class="image2" @click="changeImage2">
-				<img src="../assets/paper3.jpg" alt="Product image" height="90px" class="image3"  @click="changeImage3">
+				<img :src='image1' alt="Product image" class="large-image"><br>
+				<div class="small-images">
+					<img src="../assets/paper1.jpg" alt="Product image"  class="image1" @click="changeImage1">
+					<img src="../assets/paper2.jpg" alt="Product image" class="image2" @click="changeImage2">
+					<img src="../assets/paper3.jpg" alt="Product image" class="image3"  @click="changeImage3">
+				</div>
 			</div>
 			<div class="info">
 				<h2>Paper</h2>
 				<div class="info-container">
-					<h3 class="price">599 kr</h3>
+					<h3 class="price">299 kr</h3>
 					<div class="options-container">
 						<select id="cars" name="cars" class="options">
 							<option value="white" selected>White</option>
@@ -91,7 +93,7 @@ export default {
 	methods: {
 		addCartButton(){
 			this.cart += 1;
-			this.amount += 599;
+			this.amount += 299;
 			this.$emit('click', this.cart, this.amount)
 		},
 		changeImage1(){
@@ -122,9 +124,9 @@ p{
 .sidebar{
 	width: 250px;
 	height: 440px;
-	border: 2px solid #ED2B91;
+	/* border: 2px solid #ED2B91; */
 	border-radius: 3px;
-	padding: 1em;
+	padding:  1em;
 	margin: 0 0 3em 2em;
 	display: inline-block;
 }
@@ -144,12 +146,19 @@ a:hover{
 }
 .large-image{
 	margin: 0 0 1em 0;
+	height: 300px; 
+	width: 300px;
 }
 .image1{
 	margin: 0 0.8em 0 0;
+	height: 90px;
 }
 .image2{
 	margin: 0 0.9em 0 0;
+	height: 90px;
+}
+.image3{
+	height: 90px;
 }
 img:hover{
 	cursor: pointer;
@@ -264,6 +273,26 @@ img:hover{
 	grid-column: 1/4;
 	margin: 0 2em 0 2em;
 }
+.large-image{
+	width: 100%;
+	height: 100%;
+}
+.small-images{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+}
+.image1{
+	width: 100%;
+
+}
+.image2{
+	width: 100%;
+	
+}
+.image3{
+	width: 100%;
+}
 .box1{
 	grid-column: 1/4;
 }
@@ -274,6 +303,8 @@ img:hover{
 	grid-column: 1/4;
 }
 }
+
+
 
 
 </style>

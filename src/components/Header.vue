@@ -6,7 +6,7 @@
 				<img src="../assets/Logo.png" alt="Logo" height="40px" class="logo">
 				<input type="text" placeholder="Search here">
 				<div class="cart">
-					<img src="../assets/shopping-bag.png" alt="Shopping bag" height="20px">
+					<img src="../assets/shopping-bag.png" alt="Shopping bag" height="20px" class="bag-icon">
 					<p>({{cart}}) </p>
 					<p>
 						<span class="amount"> {{amount}} kr</span>
@@ -15,7 +15,7 @@
 				<button>Check out</button>
 			</div>
 			<nav>
-				<a href="#">All our products</a>
+				<a href="#" class="first-link">All our products</a>
 				<a href="#"> Inspiration for the office</a>
 				<a href="#">About OS</a>
 			</nav>
@@ -62,6 +62,12 @@ span{
 	grid-column: 5/5;
 	margin: 0 1em 0 0;
 }
+.bag-icon{
+	margin: 0 0.3em 0 0;
+}
+.amount{
+	margin: 0 0 0 0.3em;
+}
 button{
 	width: 100%;
 	margin: 0 2em 0 0;
@@ -74,10 +80,13 @@ nav{
 a{
 	margin: 0 0.5em 0;
 }
+.first-link{
+	margin: 0 0 0;
+}
 #hamburger{
 	display: none;
 }
-@media only screen and (max-width: 804px) {
+@media only screen and (max-width: 990px) {
 .container{
 	grid-template-columns: repeat(3, 1fr);
 }
@@ -101,6 +110,7 @@ button{
 .logo{
 	grid-column: 2/2;
 	height: 30px;
+	margin: auto;
 }
 #hamburger{
 	display: flex;
