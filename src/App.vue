@@ -11,7 +11,6 @@ import Header from './components/Header.vue'
 import Content from './components/Content.vue'
 import Footer from './components/Footer.vue'
 
-
 export default {
   name: 'App',
   components: {
@@ -20,7 +19,6 @@ export default {
   data: () => ({
 	cart: 0,
 	amount: 0,
-	
   }),
   methods:{
 		fromContent(value1, value2){
@@ -64,5 +62,6 @@ a{
 	text-decoration: none;
 	color: #333333;
 	cursor: pointer;
+	font-size: 1.1em;
 }
 </style>

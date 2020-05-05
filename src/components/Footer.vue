@@ -29,11 +29,9 @@
 				</p>
 				<p class="social-item">
 					<img src="../assets/twitter.png" height="20px" alt="Icon Twitter" class="icon"><a href="#">Twitter</a>
-	
 				</p>
 				<p class="social-item">
 					<img src="../assets/linkedin.png" height="20px" alt="Icon LinkedIn" class="icon"><a href="#">LinkedIn</a>
-					
 				</p>
 			</div>
 		</footer>

@@ -76,7 +76,6 @@
 				</div>
 			</div>
 	</div>
-	
 </template>
 
 <script>
@@ -109,22 +108,20 @@ export default {
 }
 </script>
 
-
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Alice&display=swap');
 .container{
 	display: grid;
 	grid-template-columns: 1fr 2fr 3fr;
 	margin: 0 0 2em;
-
 }
 p{
 	font-family: 'Alice', serif;
 }
 .sidebar{
 	width: 250px;
-	height: 440px;
-	/* border: 2px solid #ED2B91; */
+	/* height: 500px;
+	border: 2px solid #333333; */
 	border-radius: 3px;
 	padding:  1em;
 	margin: 0 0 3em 2em;
@@ -278,20 +275,21 @@ img:hover{
 	height: 100%;
 }
 .small-images{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0 3em 0;
 }
 .image1{
-	width: 100%;
-
+	margin: 0;
+	max-width: 60%;
 }
 .image2{
-	width: 100%;
+	margin: 0;
+	max-width: 60%;
 	
 }
 .image3{
-	width: 100%;
+	max-width: 60%;
 }
 .box1{
 	grid-column: 1/4;
